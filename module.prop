@@ -1,9 +1,9 @@
-id=template
-name=Template Module
-version=v1
-versionCode=1
-author=topjohnwu
-description=A short description
-support=http://forum.xda-developers.com/showthread.php?t=3432382
-donate=http://topjohnwu.github.io/donate
+id=MagsikFrida
+name=Magsik Frida
+version=8.1.1
+versionCode=811
+author=Frida
+description=See http://www.frida.re/news/ for details.
+support=http://www.frida.re/
+donate=
 cacheModule=false
