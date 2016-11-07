@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # Author: TheCjw<thecjw@live.com>
 # Created on 2016.10.17
@@ -43,8 +43,8 @@ def main():
 
     download_url = "https://github.com/frida/frida/releases/download/{0}/".format(version)
 
-    # download_file(download_url + frida_server_32, frida_server_32)
-    # download_file(download_url + frida_server_64, frida_server_64)
+    download_file(download_url + frida_server_32, frida_server_32)
+    download_file(download_url + frida_server_64, frida_server_64)
 
     # arm frida.
     extract_file(frida_server_32, os.path.join(os.path.dirname(__file__),
