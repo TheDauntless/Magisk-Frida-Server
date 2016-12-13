@@ -138,3 +138,5 @@ fabric.properties
 *.xz
 .idea/
 system/xbin/
+*.zip
+module.prop

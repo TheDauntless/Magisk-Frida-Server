@@ -104,4 +104,5 @@ set_permissions() {
   # set_perm  <filename>                         <owner> <group> <permission> <contexts> (default: u:object_r:system_file:s0)
   set_perm  $MODPATH/system/xbin/frida_server_32   0       2000    0755         u:object_r:system_file:s0
   set_perm  $MODPATH/system/xbin/frida_server_64   0       2000    0755         u:object_r:system_file:s0
+  set_perm  $MODPATH/system/xbin/debug_server   0       2000    0755         u:object_r:system_file:s0
 }

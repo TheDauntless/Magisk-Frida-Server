@@ -1,9 +1,0 @@
-id=MagsikFrida
-name=Magsik Frida
-version=8.1.1
-versionCode=811
-author=Frida
-description=See http://www.frida.re/news/ for details.
-support=http://www.frida.re/
-donate=
-cacheModule=false
