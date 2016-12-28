@@ -84,7 +84,7 @@ cacheModule=false
                  "system/xbin/frida_server_32",
                  "system/xbin/frida_server_64",
                  "system/xbin/debug_server",
-                 "system/placeholder",
+                 "system/xbin/debug_server64",
                  "config.sh",
                  "changelog.txt",
                  "module.prop"]
