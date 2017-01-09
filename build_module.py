@@ -94,7 +94,7 @@ cacheModule=false
         for file_name in file_list:
             path = os.path.join(base_path, file_name)
             if not os.path.exists(path):
-                print("{0} is not exists, skip...")
+                print("{0} is not exists, skip...".format(path))
                 continue
             zf.write(path, arcname=file_name)
 
