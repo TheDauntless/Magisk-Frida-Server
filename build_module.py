@@ -92,7 +92,11 @@ cacheModule=false
     print("Building Magisk module.")
     with zipfile.ZipFile("Magisk-Frida-Server-{0}.zip".format(version), "w") as zf:
         for file_name in file_list:
-            zf.write(os.path.join(base_path, file_name), arcname=file_name)
+            path = os.path.join(base_path, file_name)
+            if not os.path.exists(path):
+                print("{0} is not exists, skip...")
+                continue
+            zf.write(path, arcname=file_name)
 
     print("Done.")
 
