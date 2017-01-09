@@ -13,10 +13,14 @@ import shutil
 import zipfile
 
 
-def download_file(download_url, file_name):
-    print("Downloading", file_name)
+def download_file(download_url, path):
+    if os.path.exists(path):
+        print("{0} is exists, skip...".format(path))
+        return
+
+    print("Downloading", download_url)
     response = requests.get(download_url, stream=True)
-    with open(file_name, "wb") as out:
+    with open(path, "wb") as out:
         shutil.copyfileobj(response.raw, out)
     del response
     print("done.")
@@ -65,15 +69,19 @@ cacheModule=false
 
     download_url = "https://github.com/frida/frida/releases/download/{0}/".format(version)
 
-    download_file(download_url + frida_server_32, frida_server_32)
-    download_file(download_url + frida_server_64, frida_server_64)
+    cache_path = os.path.join(base_path, "cache")
+    frida_server_32_path = os.path.join(cache_path, frida_server_32)
+    frida_server_64_path = os.path.join(cache_path, frida_server_64)
+
+    download_file(download_url + frida_server_32, frida_server_32_path)
+    download_file(download_url + frida_server_64, frida_server_64_path)
 
     # arm frida.
-    extract_file(frida_server_32, os.path.join(base_path,
-                                               "system/xbin/frida_server_32"))
+    extract_file(frida_server_32_path, os.path.join(base_path,
+                                                    "system/xbin/frida_server_32"))
 
-    extract_file(frida_server_64, os.path.join(base_path,
-                                               "system/xbin/frida_server_64"))
+    extract_file(frida_server_64_path, os.path.join(base_path,
+                                                    "system/xbin/frida_server_64"))
 
     file_list = ["common/service.sh",
                  "common/post-fs-data.sh",
@@ -90,7 +98,8 @@ cacheModule=false
                  "module.prop"]
 
     print("Building Magisk module.")
-    with zipfile.ZipFile("Magisk-Frida-Server-{0}.zip".format(version), "w") as zf:
+    with zipfile.ZipFile(os.path.join(cache_path,
+                                      "Magisk-Frida-Server-{0}.zip".format(version)), "w") as zf:
         for file_name in file_list:
             path = os.path.join(base_path, file_name)
             if not os.path.exists(path):
