@@ -15,7 +15,7 @@ import zipfile
 
 def download_file(download_url, path):
     if os.path.exists(path):
-        print("{0} is exists, skip...".format(path))
+        print("{0} is exists, skip...".format(os.path.basename(path)))
         return
 
     print("Downloading", download_url)
@@ -37,7 +37,7 @@ def extract_file(archive, file_name):
 
 
 def main():
-    base_path = os.path.dirname(__file__)
+    base_path = os.path.abspath(os.path.dirname(__file__))
 
     frida_release_url = "https://api.github.com/repos/frida/frida/releases/latest"
 
