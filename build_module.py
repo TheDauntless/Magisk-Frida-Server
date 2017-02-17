@@ -78,10 +78,10 @@ cacheModule=false
 
     # arm frida.
     extract_file(frida_server_32_path, os.path.join(base_path,
-                                                    "system/xbin/frida_server_32"))
+                                                    "system/xbin/frida_server"))
 
     extract_file(frida_server_64_path, os.path.join(base_path,
-                                                    "system/xbin/frida_server_64"))
+                                                    "system/xbin/frida_server64"))
 
     file_list = ["common/service.sh",
                  "common/post-fs-data.sh",
@@ -89,8 +89,8 @@ cacheModule=false
                  "common/file_contexts_image",
                  "META-INF/com/google/android/update-binary",
                  "META-INF/com/google/android/updater-script",
-                 "system/xbin/frida_server_32",
-                 "system/xbin/frida_server_64",
+                 "system/xbin/frida_server",
+                 "system/xbin/frida_server64",
                  "system/xbin/debug_server",
                  "system/xbin/debug_server64",
                  "config.sh",
