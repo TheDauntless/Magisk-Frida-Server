@@ -106,4 +106,5 @@ set_permissions() {
   set_perm  $MODPATH/system/xbin/frida_server64   0       2000    0755         u:object_r:system_file:s0
   set_perm  $MODPATH/system/xbin/debug_server   0       2000    0755         u:object_r:system_file:s0
   set_perm  $MODPATH/system/xbin/debug_server64   0       2000    0755         u:object_r:system_file:s0
+  set_perm  $MODPATH/system/xbin/tcpdump   0       2000    0755         u:object_r:system_file:s0
 }

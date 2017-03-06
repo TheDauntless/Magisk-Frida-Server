@@ -93,6 +93,7 @@ cacheModule=false
                  "system/xbin/frida_server64",
                  "system/xbin/debug_server",
                  "system/xbin/debug_server64",
+                 "system/xbin/tcpdump",
                  "config.sh",
                  "changelog.txt",
                  "module.prop"]
