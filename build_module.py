@@ -95,7 +95,6 @@ cacheModule=false
                  "system/xbin/debug_server64",
                  "system/xbin/tcpdump",
                  "config.sh",
-                 "changelog.txt",
                  "module.prop"]
 
     print("Building Magisk module.")
