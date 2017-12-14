@@ -140,3 +140,5 @@ fabric.properties
 system/xbin/
 *.zip
 module.prop
+
+.vscode/
