@@ -1,4 +1,4 @@
-# Magisk Frida server module for Android
+# Magisk Frida-Server module for Android
 
 This is a Magisk Module that installs [Frida server](https://www.frida.re), a popular reverse-engineering tool.
 
